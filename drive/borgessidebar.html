@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+      h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 2em;
+        margin: 16px 0px 8px 10px;
+        color: #323232;
+      }
+      h2 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1em;
+        margin: 16px 0px 8px 10px;
+        color: #323232;
+      }
+
+      p, ul, li {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+        margin-top: 3px;
+        margin-bottom: 5px;
+        color: #323232;
+      }
+
+      div {
+        background-color: #323232;
+        padding: 8px;
+        margin: 8px;
+        display: inline-block;
+      }
+
+      div > p{
+        color: white;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body bgcolor="#FFFFA5">
+    <h1> <?!= doc.getName(); ?> </h1>
+    <h2> Estructura </h2>
+    <ul id='struct' contenteditable="true">
+    </ul>
+    <h2> A tener en cuenta </h2>
+    <ul id='stuff' contenteditable="true">
+    </ul>
+
+  <div id="refresh"> <p> Recargar </p> </div>
+  <?!= include('borgesJS'); ?>
+  </body>
+</html>
