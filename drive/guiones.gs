@@ -84,8 +84,6 @@ function fixFormat(){
   for(var n = 1; n < pars.length; n++){
     var elm = pars[n].getElement();
     if(elm.getType() === DocumentApp.ElementType.PARAGRAPH){
-      //partimos por ponerle el estilo base
-      elm.setAttributes(Estilos.BASE);
       //Comprobar es un párrafo describiendo una acotación o una acción
       if(elm.getText()[0] == '(' || elm.getText()[0] == '['){
         elm.setAttributes(Estilos.ACOTAR_DISPLAY);
